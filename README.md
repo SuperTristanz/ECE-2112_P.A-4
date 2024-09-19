@@ -19,35 +19,46 @@
 ### 1. we first Import the pandas library to get the given Problems
 ## ![image](https://github.com/user-attachments/assets/05b03efe-f975-4247-b643-8b2ebf42ebbd)
 ### 2. We need to import/ read the file and the data frame given to us and naming it df, hence to read it we use the .read_excell() function
-### ![image](https://github.com/user-attachments/assets/10f665bc-f32b-410e-837b-2240dcc1b373)
+### ![image](https://github.com/user-attachments/assets/70aec30f-5621-4621-b555-f8287a5d46d4)
+
+
 ### Output for the code:
 ### ![image](https://github.com/user-attachments/assets/3bd6c0a1-901d-4fb3-ae29-5026b6760730)
 
 ### 3. A. The variable instru should Output the Name, GEAS, Elecronics should be greater than 70 where the track should be instrumentation and the hometown is Luzon
 ### Solution to the Problem A
-#### ![image](https://github.com/user-attachments/assets/b3b29c1e-091a-4790-b190-94a5a387530e)
+#### ![image](https://github.com/user-attachments/assets/7c0e276f-c9ce-4b8e-bfb1-5ba1b10a5850)
+
 #### we use use .loc function to identify and to get the function we need:
 #### - (df['Hometown'] ==  'luzon') where it would output the hometown who are only in Luzon
 #### - (df['Electronics']>70 ) where it would only output the score In electronics who is greater than 70
 #### - (df['Track'] == 'Instrumentation') where it would only output the track is only on Instrumentation
+#### - usage of .reset_values to ensure that index to be at 0 starting for better visualization 
 #### - ,['Name', 'GEAS', 'Electronics'] this would only output the columns that is said
 #### - we use & so that the given should Satify all the conditions met
 
 ### Output of the code:
-# ![image](https://github.com/user-attachments/assets/7c668614-9814-4a89-832b-8a548805c011)
+# ![image](https://github.com/user-attachments/assets/3d0b2f13-3e44-45e0-9a6e-cd062cf0b39b)
+
 
 ### 4. B. The Variable Mindy should hold the following conditions it should only ouput ['Name', 'Track', 'Electronics', 'Average>55 '] where the hometown is located on mindanao and the gender is Female
 ### 4.1 new problem arises in which we dont have Average of the subjects, hence we make one using this block of code: 
 ### ![image](https://github.com/user-attachments/assets/18f4b1d2-cc75-41d4-a5b8-7292320cbe56)
+### Now we did get the average hence we use this code to CategorizeL 
+# ![image](https://github.com/user-attachments/assets/340e8d2f-3767-4719-8ac2-518006d7df16)
+
+#### - utilizing the .sort function of the track so that the track will be itemized 
 #### - we use df['Average'] as new variable 
 #### - df['GEAS', 'Electronics', 'Math', 'Communication'].mean(axis=1) Utilizing the.mean function we mean the whole row and in order to do that we put the axis on 1 hence in each list we average the row and put it into df['Average']
 #### - df['Hometown'] == 'Mindanao' where it would specified the hometown output to only mindanao
 #### - df['Gender']== 'Female' where it would only output only Female on the Gender category
 #### - df['Average'] > 55 where it would only output only greater than 55 of score
+#### - usage of .reset_values to ensure that index to be at 0 starting for better visualization 
 #### - ,['Name', 'Track', 'Electronics', 'Average'] the only colomns to be output
 
 ### Output Of the Code:
-## ![image](https://github.com/user-attachments/assets/dfb59493-c67e-40ba-90b9-b6b79f902972)
+## ![image](https://github.com/user-attachments/assets/fb0148d8-5103-4c9f-bde5-6fb37751ff7b)
+
 
 
 ### Problem 2
@@ -109,3 +120,8 @@
 ##### • Faculty member at UST-ECE Department
 ##### • PhD EEE with specialization in AI and
 ##### Robotics student at UP-Diliman
+
+### Revisions
+#### - adding of the code
+#### - Updating the Readme 
+#### - adding data wrangling to the code
